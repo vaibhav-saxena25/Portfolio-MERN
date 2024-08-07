@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname,'../client/build')));
 
 app.use('/api/v1/portfolio',require('./routes/portfolioRoutes'));
 
-app.get('*',function(req,res)=>{
+app.get('*',(req,res)=>{
     res.sendFile(path.join(__dirname,'../client/build/index.html'));
 });
 
